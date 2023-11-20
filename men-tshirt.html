@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Hexashop - Product Detail Page</title>
+    <title>MarketMingle</title>
 
 
     <!-- Additional CSS Files -->
@@ -22,13 +22,48 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
-<!--
 
-TemplateMo 571 Hexashop
+    <style>
+        .small-img-group{
+            display:flex ;
+            justify-content: space-between ;
+        }
+        .small-img-col{
+            flex-basis:24%;
+            cursor:pointer;
+        }
+        .sproduct select{
+            display:block;
+            padding:5px 10px;
+        }
+        .sproduct input{
+            width:50px;
+            height: 40px;
+            padding-left:10px;
+            font-size:10px;
+            margin-right: 10px;   
+        }
+        .sproduct input:focus{
+            outline: none;    
+        }
+        .buy-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid #3498db;
+        color: #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        }
 
-https://templatemo.com/tm-571-hexashop
-
--->
+        .buy-btn:hover {
+        background-color: #3498db;
+        color: #fff; 
+        }
+    </style>
     </head>
     
     <body>
@@ -57,11 +92,11 @@ https://templatemo.com/tm-571-hexashop
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="index.html">Men's</a></li>
-                            <li class="scroll-to-section"><a href="index.html">Women's</a></li>
-                            <li class="scroll-to-section"><a href="index.html">Kid's</a></li>
-                            <li class="submenu">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home 🏠</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Men's 🧥</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Women's 👗</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Kid's 👕</a></li>
+                            <!-- <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
                                     <li><a href="about.html">About Us</a></li>
@@ -69,8 +104,8 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="single-product.html">Single Product</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
-                            </li>
-                            <li class="submenu">
+                            </li> -->
+                            <!-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
                                     <li><a href="#">Features Page 1</a></li>
@@ -78,7 +113,7 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="#">Features Page 3</a></li>
                                     <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li class="scroll-to-section"><a href="index.html">Explore</a></li>
                         </ul>        
                         <a class='menu-trigger'>
@@ -91,69 +126,64 @@ https://templatemo.com/tm-571-hexashop
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed top">
 
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading" id="top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="inner-content">
-                        <h2>Single Product Page</h2>
-                        <span>Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+    </nav>
+
+    <section class="container sproduct my-5 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pb-2" id="MainImg" src="assets/images/men-020.png" alt="#">
+                
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="assets/images/men-020.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="assets/images/men-021.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="assets/images/men-022.png" width="100%" class="small-img" alt="">     
+                    </div>
+                    <div class="small-img-col">
+                        <img src="assets/images/men-023.png" width="100%" class="small-img" alt="">
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
 
-
-    <!-- ***** Product Area Starts ***** -->
-    <section class="section" id="product">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                <div class="left-images">
-                    <img src="assets/images/single-product-01.jpg" alt="">
-                    <img src="assets/images/single-product-02.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="right-content">
-                    <h4>New Green Jacket</h4>
-                    <span class="price">$75.00</span>
-                    <ul class="stars">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
-                    <div class="quote">
-                        <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
-                    </div>
-                    <div class="quantity-content">
-                        <div class="left-content">
-                            <h6>No. of Orders</h6>
-                        </div>
-                        <div class="right-content">
-                            <div class="quantity buttons_added">
-                                <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <h4>Total: $210.00</h4>
-                        <div class="main-border-button"><a href="#">Add To Cart</a></div>
-                    </div>
-                </div>
-            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>HOME / T-SHIRT</h6>
+                <h3 class="py-4">ROADSTER</h3>
+                <h2>₹599</h2>
+                <br>
+                <select class="my-3">
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>Small</option>
+                    <option>Large</option>
+                </select>
+                <input type="number" value="1">
+                <button class="buy-btn">Add To Cart</button>
+                <h4 class="mt-5 mb-5">
+                    Product Detail
+                </h4>
+                <span>
+                    Product Details
+                    Name : """"Men's Half T-shirt""""" Cotton Blend (RoseGold & Teal Blue) Casual Wear Striped T-shirts"""""Combo Pack Of 2
+                    Fabric : Cotton Blend
+                    <br>
+                    <br>
+                    Sleeve Length : Short Sleeves
+                    <br>
+                    <br>
+                    Pattern : Striped
+                </span>
             </div>
         </div>
     </section>
-    <!-- ***** Product Area Ends ***** -->
-    
+
+
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
@@ -161,11 +191,11 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="assets/images/logo.png" alt="MarketMarket">
                         </div>
                         <ul>
-                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">Uttar Pradesh , India</a></li>
+                            <li><a href="#">MarketMingle@company.com</a></li>
                             <li><a href="#">010-020-0340</a></li>
                         </ul>
                     </div>
@@ -173,9 +203,9 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <h4>Shopping &amp; Categories</h4>
                     <ul>
-                        <li><a href="#">Men’s Shopping</a></li>
-                        <li><a href="#">Women’s Shopping</a></li>
-                        <li><a href="#">Kid's Shopping</a></li>
+                        <li><a href="https://www.myntra.com/shop/men">Men’s Shopping</a></li>
+                        <li><a href="https://www.myntra.com/shop/women">Women’s Shopping</a></li>
+                        <li><a href="https://www.myntra.com/shop/kids">Kid's Shopping</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -198,14 +228,13 @@ https://templatemo.com/tm-571-hexashop
                 </div>
                 <div class="col-lg-12">
                     <div class="under-footer">
-                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                        <p>Copyright © 2023 MarketMingle Co. , Ltd. All Rights Reserved. 
                         
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                        
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -232,7 +261,6 @@ https://templatemo.com/tm-571-hexashop
     <script src="assets/js/slick.js"></script> 
     <script src="assets/js/lightbox.js"></script> 
     <script src="assets/js/isotope.js"></script> 
-    <script src="assets/js/quantity.js"></script>
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
@@ -253,6 +281,24 @@ https://templatemo.com/tm-571-hexashop
             });
         });
 
+    </script>
+    <script>
+
+     var MainImg = document.getElementById('MainImg');
+     var smallimg = document.getElementsByClassName('small-img');
+
+     smallimg[0].onclick = function(){
+        MainImg.src = smallimg[0].src;
+     }
+     smallimg[1].onclick = function(){
+        MainImg.src = smallimg[1].src;
+     }
+     smallimg[2].onclick = function(){
+        MainImg.src = smallimg[2].src;
+     }
+     smallimg[3].onclick = function(){
+        MainImg.src = smallimg[3].src
+     }
     </script>
 
   </body>
