@@ -133,7 +133,7 @@
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-2" src="assets/images/men-010.png" alt="#">
+                <img class="img-fluid w-100 pb-2" id="MainImg" src="assets/images/men-010.png" alt="#">
                 
                 <div class="small-img-group">
                     <div class="small-img-col">
@@ -286,6 +286,24 @@
             });
         });
 
+    </script>
+    <script>
+
+     var MainImg = document.getElementById('MainImg');
+     var smallimg = document.getElementsByClassName('small-img');
+
+     smallimg[0].onclick = function(){
+        MainImg.src = smallimg[0].src;
+     }
+     smallimg[1].onclick = function(){
+        MainImg.src = smallimg[1].src;
+     }
+     smallimg[2].onclick = function(){
+        MainImg.src = smallimg[2].src;
+     }
+     smallimg[3].onclick = function(){
+        MainImg.src = smallimg[3].src
+     }
     </script>
 
   </body>
