@@ -1,0 +1,57 @@
+.container{
+    height:400px;
+    width:400px;
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+
+.a{
+    background-color: azure;
+    height:100px;
+    width:400px;
+}
+.b{
+    background-color: burlywood;
+    height:200px;
+    width:400px;
+}
+.c{
+    background-color: black ;
+    height:100px;
+    width:400px;
+}
+.b1{
+    background-color: yellow;
+    height: 200px;
+    width:300px;
+}
+.b2{
+    background-color: white;
+    height: 200px;
+    width:100px;
+}
+.b11{
+    background-color: blue;
+    height: 100px;
+    width:300px;
+}
+.b12{
+    background-color: rgb(red, green, blue);
+    height: 100px;
+    width:300px;
+}
+.b21{
+    background-color: skyblue;
+    height: 33px;
+    width:300px;
+}
+.b22{
+    background-color: navajowhite;
+    height: 33px;
+    width:300px;
+}
+.b23{
+    background-color: blanchedalmond;
+    height: 34px;
+    width:300px;
+}
