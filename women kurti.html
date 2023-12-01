@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>MarketMingle</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/marketmingle.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <style>
+        .small-img-group{
+            display:flex ;
+            justify-content: space-between ;
+        }
+        .small-img-col{
+            flex-basis:24%;
+            cursor:pointer;
+        }
+        .sproduct select{
+            display:block;
+            padding:5px 10px;
+        }
+        .sproduct input{
+            width:50px;
+            height: 40px;
+            padding-left:10px;
+            font-size:10px;
+            margin-right: 10px;   
+        }
+        .sproduct input:focus{
+            outline: none;    
+        }
+        .buy-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid #3498db;
+        color: #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buy-btn:hover {
+        background-color: #3498db;
+        color: #fff; 
+        }
+        .categories{
+            margin: 70px 0;
+        }
+        .col-3{
+            flex-basis: 30%;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        .col-3 img{
+            width:100%;
+        }
+        .small-container{
+            max-width: 1080px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    </style>
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home 🏠</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Men's 🧥</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Women's 👗</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Kid's 👕</a></li>
+                            <!-- <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="single-product.html">Single Product</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li> -->
+                            <!-- <li class="submenu">
+                                <a href="javascript:;">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="scroll-to-section"><a href="index.html">Explore</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed top">
+
+    </nav>
+
+    <section class="container sproduct my-5 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pb-2" id="MainImg" src="assets/images/Women11.png" alt="#">
+                
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="assets/images/Women11.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="assets/images/Women11.1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="assets/images/Women11.2.png" width="100%" class="small-img" alt="">     
+                    </div>
+                    <div class="small-img-col">
+                        <img src="assets/images/Womwn11.3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>HOME / KURTA</h6>
+                <h3 class="py-4">VANHUSSEN</h3>
+                <h2>₹1599</h2>
+                <br>
+                <select class="my-3">
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>Small</option>
+                    <option>Large</option>
+                </select>
+                <input type="number" value="1">
+                <button class="buy-btn">Add To Cart</button>
+                <h4 class="mt-5 mb-5">
+                    Product Detail
+                </h4>
+                <span>
+                    Mauve solid formal kurta, has a spread collar, long sleeves, curved hem .
+                    <br>
+                    <br>
+                    <h5>Size & Fit</h5>
+                    Slim fit
+                    <br>
+                    M (Chest Size : 40 in, Length Size: 28 in)
+                    <br>
+                    L (Chest Size : 42 in, Length Size: 29 in)
+                    <br>
+                    XL (Chest Size : 44 in, Length Size: 30 in)
+                    <br>
+                    XXL (Chest Size : 46 in, Length Size: 31 in)
+                    <br>
+                    <br>
+                    <h5>Material & Care</h5>
+                    Cotton
+                    <br>
+                    Hand Wash Or Machine Wash
+                </span>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>Related Products</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="assets/images/related1.png" alt="#">
+                    <div class="down-content">
+                        <h4>Lacoste</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <span>$120.00</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="assets/images/related1.png" alt="#">
+                    <div class="down-content">
+                        <h4>Lacoste</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <span>$1220.00</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="assets/images/related1.png" alt="#">
+                    <div class="down-content">
+                        <h4>Lacoste</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <span>$120.00</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="assets/images/related1.png" alt="#">
+                    <div class="down-content">
+                        <h4>Lacoste</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <span>$120.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/logo.png" alt="MarketMarket">
+                        </div>
+                        <ul>
+                            <li><a href="#">Uttar Pradesh , India</a></li>
+                            <li><a href="#">MarketMingle@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="https://www.myntra.com/shop/men">Men’s Shopping</a></li>
+                        <li><a href="https://www.myntra.com/shop/women">Women’s Shopping</a></li>
+                        <li><a href="https://www.myntra.com/shop/kids">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2023 MarketMingle Co. , Ltd. All Rights Reserved. 
+                        
+                        
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+    <script>
+
+     var MainImg = document.getElementById('MainImg');
+     var smallimg = document.getElementsByClassName('small-img');
+
+     smallimg[0].onclick = function(){
+        MainImg.src = smallimg[0].src;
+     }
+     smallimg[1].onclick = function(){
+        MainImg.src = smallimg[1].src;
+     }
+     smallimg[2].onclick = function(){
+        MainImg.src = smallimg[2].src;
+     }
+     smallimg[3].onclick = function(){
+        MainImg.src = smallimg[3].src
+     }
+    </script>
+
+  </body>
+
+</html>
