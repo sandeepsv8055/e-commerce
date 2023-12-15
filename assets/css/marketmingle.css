@@ -1080,15 +1080,27 @@ Women
   background-color: transparent;
   line-height: 48px;
   border :1px solid #2a2a2a;
-}
+} 
 
 /*
 --------------------------------------------
 banner
 --------------------------------------------
 */
+
 .section-m1{
   margin: 40px 0;
+}
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #495958;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
 }
 #banner{
   display: flex;
@@ -1102,16 +1114,19 @@ banner
   background-size: cover;
   background-position: center;
 }
-
+    
 #banner h4{
-  color: #7a1414;
+  color: #b23838;
   font-size: 16px;
 }
 
 #banner h2{
-  color: #911717;
+  color: #513636;
   font-size: 30px;
   padding: 10px 0;
+}
+#banner h2 span {
+  color: #36a5ef;
 }
 
 
