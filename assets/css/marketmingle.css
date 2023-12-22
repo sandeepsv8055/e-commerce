@@ -1084,7 +1084,7 @@ Women
 
 /*
 --------------------------------------------
-banner
+banner addd 
 --------------------------------------------
 */
 *{
@@ -1102,7 +1102,7 @@ banner
 }
 
 .banner-container .banner{
-  background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+  background:linear-gradient(-55deg, #020024 29%, #035594 29.1%, #0476c1 68%, #00d4ff 68.1%);
   border-radius: 5px;
   margin:10px;
   display: flex;
