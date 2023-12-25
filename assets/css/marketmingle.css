@@ -1102,7 +1102,7 @@ banner addd
 }
 
 .banner-container .banner{
-  background:linear-gradient(-55deg, #020024 29%, #035594 29.1%, #0476c1 68%, #00d4ff 68.1%);
+  background:linear-gradient(-55deg, #000000 29%, #5d5d5d 29.1%, #a8a8a8 68%, #ffffff 68.1%);
   border-radius: 5px;
   margin:10px;
   display: flex;
