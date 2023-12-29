@@ -423,7 +423,38 @@ https://templatemo.com/tm-571-hexashop
         </div>
     </section>
     <!-- ***** Women Area Ends ***** -->
-    <!-- bannner-->
+<div class="banner">
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            
+            <div class="slide first">
+                <img src="assets/images/banner1.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="assets/images/banner2.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="assets/images/banner3.png" alt="">
+
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+</div>
     
     
     <!-- ***** Kids Area Starts ***** -->
@@ -847,6 +878,17 @@ https://templatemo.com/tm-571-hexashop
             });
         });
 
+    </script>
+
+    <script type="text/javascript">
+     var counter= 1;
+     setInterval(function(){
+       document.getElementById("radio" + counter).checked=true;
+       counter++;
+       if(counter>3){
+        counter =1;
+       }
+     },3000);
     </script>
 
   </body>
