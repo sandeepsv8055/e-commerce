@@ -1097,13 +1097,13 @@ banner addd
   background: white;
 }
 .slider{
-  width: 800px;
+  width: 1000px;
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
 }
 .slides{
-  width: 500%;
+  width: 520%;
   height: 500px;
   display: flex;
 }
@@ -1115,7 +1115,7 @@ banner addd
   transition: 2s;
 }
 .slide img{
-  width: 800px;
+  width: 1000px;
   height: 300px;
 }
 .navigation-manual{
