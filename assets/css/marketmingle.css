@@ -1103,7 +1103,7 @@ banner addd
   overflow: hidden;
 }
 .slides{
-  width: 520%;
+  width: 505%;
   height: 500px;
   display: flex;
 }
@@ -1116,11 +1116,11 @@ banner addd
 }
 .slide img{
   width: 1000px;
-  height: 300px;
+  height: 330px;
 }
 .navigation-manual{
   position: absolute;
-  width: 800px;
+  width: 950px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
