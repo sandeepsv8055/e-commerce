@@ -162,7 +162,7 @@
             border-radius: 3px;
             width: 80px;
         }
-        .fa {
+        .fa-solid{
             color: grey;
         }
         .cart p{
@@ -174,6 +174,42 @@
             border-radius: 22px;
             background-color: grey;
             color: white;
+        }
+        .container{
+            display: flex;
+            width: 70%;
+            margin-bottom: 30px;
+        }
+        #root{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        .sidebar{
+            width: 40%;
+            border-radius: 5px;
+            background-color: #eee;
+            margin-left: 20px;
+            padding: 15px;
+            text-align: center;
+        }
+        .head{
+            background-color: grey;
+            border-radius: 3px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .foot{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid #333;
         }
     </style>
     </head>
@@ -241,14 +277,14 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed top">
 
     </nav>
-    <!-- Add to cart start -->
+    <!--*** Add to Cart ***-->
     <div class="header">
         <p class="logo">LOGO</p>
         <div class="cart"><i class="fa fa-shopping-cart cart"></i><p id="count">0</p></div>
     </div>
     <div class="container">
         <div id="root"></div>
-        <div class="slidebar">
+        <div class="sidebar">
             <div class="head"><p>My Cart</p></div>
             <div id="cartItem">Your cart is empty</div>
             <div class="foot">
@@ -257,6 +293,37 @@
             </div>
         </div>
     </div>
+    <script> 
+        const product = [
+            {
+                id: 0,
+                image:' ',
+                title:  ,
+                price:  ,
+            }
+            {
+                id: 1,
+                image:' ',
+                title: ,
+                price:  ,
+            }
+            {
+                id: 2,
+                image:' ',
+                title: ,
+                price:  ,                
+            }
+            {    
+                id: 3,
+                image:' ',
+                title: ,
+                price:  ,
+            }
+        ]
+    </script>
+
+
+
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
