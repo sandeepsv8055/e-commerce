@@ -162,7 +162,7 @@
             border-radius: 3px;
             width: 80px;
         }
-        .fa {
+        .fa-solid{
             color: grey;
         }
         .cart p{
@@ -174,6 +174,119 @@
             border-radius: 22px;
             background-color: grey;
             color: white;
+        }
+        .container{
+            display: flex;
+            width: 70%;
+            margin-bottom: 30px;
+        }
+        #root{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        .sidebar{
+            width: 40%;
+            border-radius: 5px;
+            background-color: #eee;
+            margin-left: 20px;
+            padding: 15px;
+            text-align: center;
+        }
+        .head{
+            background-color: grey;
+            border-radius: 3px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .foot{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid #333;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid grey;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .img-box{
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image{
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .bottom{
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+
+        }
+        h2{
+            font-size: 20px;
+            color: red;
+        }
+        button{
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: grey;
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover{
+            background-color: #333;
+        }
+        .cart-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 3px;
+            margin: 10px 10px;
+        }
+        .row-img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rowimg{
+            max-width: 43px;
+            max-height: 43px;
+            border-radius: 50%;
+        }
+        .fa-trash:hover{
+            cursor: pointer;
+            color: #333;
         }
     </style>
     </head>
@@ -241,14 +354,14 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed top">
 
     </nav>
-    <!-- Add to cart start -->
+    <!--*** Add to Cart ***-->
     <div class="header">
         <p class="logo">LOGO</p>
         <div class="cart"><i class="fa fa-shopping-cart cart"></i><p id="count">0</p></div>
     </div>
     <div class="container">
         <div id="root"></div>
-        <div class="slidebar">
+        <div class="sidebar">
             <div class="head"><p>My Cart</p></div>
             <div id="cartItem">Your cart is empty</div>
             <div class="foot">
@@ -257,6 +370,99 @@
             </div>
         </div>
     </div>
+
+    <script> 
+        const product = [
+            {
+                id: 0,
+                image:'assets/images/Mens t-shirt.png',
+                title: Roadster ,
+                price: ₹599 ,
+            }
+            {
+                id: 1,
+                image:' ',
+                title: ,
+                price:  ,
+            }
+            {
+                id: 2,
+                image:' ',
+                title: ,
+                price:  ,                
+            }
+            {    
+                id: 3,
+                image:' ',
+                title: ,
+                price:  ,
+            }
+        ];
+        const categories = [...new Set(product.map((item)=>
+        {return item}))]
+        let i = 0;
+        document.getElementById('root').innerHTML = categories.map((item)=>
+        {
+            var {image, title, price} = item;
+            return(
+                `<div class = 'box'>
+                    <div class='img-box'>
+                        <img class='images' src=${image}></img>
+                    </div>
+                <div class='bottom'>
+                    <p>${title}</p>
+                    <h2>$ ₹{price}.00</h2>`+
+                    "<button onclick='addtocart("+(i++)+")'>add to cart</button"+
+                     `</div>
+                    </div>`        
+            )
+        }).join('')
+
+
+        var cart =[];
+
+        function addtocart(a){
+            cart.push({...categories[a]});
+            displaycart();
+        }
+
+        function delElement(a){
+           cart.push({...categories[a]});
+           displaycart();
+        }
+
+
+        function displaycart(a){
+            let j = 0,total=0;
+            document.getElementById("count").innerHTML=cart.length;
+            if(cart.length==0){
+                document.getElementById('cartItem').innerHTML = "Your cart is empty";
+                document.getElementById("total").innerHTML = "₹ "+0+".00";
+            }
+            else{
+                document.getElementById('cartItem').innerHTML = cart.map((items)=>
+                {
+                   var {image, title, price} = items;
+                   total=total+price;
+                   document.getElementById("total").innerHTML = "₹ "+total+".00";
+                   return(
+                    `<div class='cart-item'>
+                    <div class='row-img'>
+                        <img class='rowing' src=${image}>
+                    </div>
+                    <p style='font-size:12px;'>${title}</p>
+                    <h2 style='font-size:15px;'>$ ₹{price}.00</h2>`+
+                    "<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i></div>"
+                   );
+                }).join('');
+            }
+        }
+
+
+    </script>
+
+
+
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
@@ -314,130 +520,58 @@
         <P>Here are some related products</P>
         <div class="pro-container">
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/mens1.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/mens.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/mens3.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/kids.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/kids1.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                   
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/Women ethnic.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/women ethnic3.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="assets/images/home and decor.jpg" height="200" alt="">
+                <img src="assets/images/women ethnic2.png" height="500" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Clothes</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>  
-                    </div>
-                    <h4>$56</h4>
+                    
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
