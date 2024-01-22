@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-ezjTl/dJBRtRNXccZj2lW3ll8NzG0p3XHNRt1PGn8rU6bDBy/K2iDOoKFn5Ty37d" crossorigin="anonymous">
 
     <title>MarketMingle</title>
 
@@ -371,96 +372,7 @@
         </div>
     </div>
 
-    <script> 
-        const product = [
-            {
-                id: 0,
-                image:'assets/images/Mens t-shirt.png',
-                title: Roadster ,
-                price: ₹599 ,
-            }
-            {
-                id: 1,
-                image:' ',
-                title: ,
-                price:  ,
-            }
-            {
-                id: 2,
-                image:' ',
-                title: ,
-                price:  ,                
-            }
-            {    
-                id: 3,
-                image:' ',
-                title: ,
-                price:  ,
-            }
-        ];
-        const categories = [...new Set(product.map((item)=>
-        {return item}))]
-        let i = 0;
-        document.getElementById('root').innerHTML = categories.map((item)=>
-        {
-            var {image, title, price} = item;
-            return(
-                `<div class = 'box'>
-                    <div class='img-box'>
-                        <img class='images' src=${image}></img>
-                    </div>
-                <div class='bottom'>
-                    <p>${title}</p>
-                    <h2>$ ₹{price}.00</h2>`+
-                    "<button onclick='addtocart("+(i++)+")'>add to cart</button"+
-                     `</div>
-                    </div>`        
-            )
-        }).join('')
-
-
-        var cart =[];
-
-        function addtocart(a){
-            cart.push({...categories[a]});
-            displaycart();
-        }
-
-        function delElement(a){
-           cart.push({...categories[a]});
-           displaycart();
-        }
-
-
-        function displaycart(a){
-            let j = 0,total=0;
-            document.getElementById("count").innerHTML=cart.length;
-            if(cart.length==0){
-                document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "₹ "+0+".00";
-            }
-            else{
-                document.getElementById('cartItem').innerHTML = cart.map((items)=>
-                {
-                   var {image, title, price} = items;
-                   total=total+price;
-                   document.getElementById("total").innerHTML = "₹ "+total+".00";
-                   return(
-                    `<div class='cart-item'>
-                    <div class='row-img'>
-                        <img class='rowing' src=${image}>
-                    </div>
-                    <p style='font-size:12px;'>${title}</p>
-                    <h2 style='font-size:15px;'>$ ₹{price}.00</h2>`+
-                    "<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i></div>"
-                   );
-                }).join('');
-            }
-        }
-
-
-    </script>
-
+    
 
 
     <section class="container sproduct my-5 pt-5">
@@ -695,6 +607,131 @@
         MainImg.src = smallimg[3].src
      }
     </script>
+    <!-- ... Previous HTML content ... -->
+
+<script>
+    const product = [
+        {
+            id: 0,
+            image: 'assets/images/Mens t-shirt.png',
+            title: 'Roadster T-Shirt',
+            price: 599,
+        },
+        // Add other products with similar structure
+    ];
+
+    var cart = [];
+
+    function addtocart(productId) {
+        const selectedProduct = product.find(item => item.id === productId);
+        if (selectedProduct) {
+            cart.push(selectedProduct);
+            displaycart();
+        }
+    }
+
+    function delElement(index) {
+        cart.splice(index, 1);
+        displaycart();
+    }
+
+    function displaycart() {
+        // Your existing displaycart logic
+    }
+</script>
+</body>
+</html>
+
+    <!-- <script> 
+        const product = [
+            {
+                id: 0,
+                image:'assets/images/Mens t-shirt.png',
+                title: Roadster ,
+                price: ₹599 ,
+            }
+            {
+                id: 1,
+                image:'ass',
+                title: ,
+                price:  ,
+            }
+            {
+                id: 2,
+                image:' ',
+                title: ,
+                price:  ,                
+            }
+            {    
+                id: 3,
+                image:' ',
+                title: ,
+                price:  ,
+            }
+        ];
+        const categories = [...new Set(product.map((item)=>
+        {return item}))]
+        let i = 0;
+        document.getElementById('root').innerHTML = categories.map((item)=>
+        {
+            var {image, title, price} = item;
+            return(
+                `<div class = 'box'>
+                    <div class='img-box'>
+                        <img class='images' src=${image}></img>
+                    </div>
+                <div class='bottom'>
+                    <p>${title}</p>
+                    <h2>$ ₹{price}.00</h2>`+
+                    "<button onclick='addtocart("+(i++)+")'>add to cart</button"+
+                     `</div>
+                    </div>`        
+            )
+        }).join('')
+
+
+        var cart =[];
+
+        function addtocart(a){
+            cart.push({...categories[a]});
+            displaycart();
+        }
+
+        function delElement(a){
+           cart.push({...categories[a]});
+           displaycart();
+        }
+
+
+        function displaycart(a){
+            let j = 0,total=0;
+            document.getElementById("count").innerHTML=cart.length;
+            if(cart.length==0){
+                document.getElementById('cartItem').innerHTML = "Your cart is empty";
+                document.getElementById("total").innerHTML = "₹ "+0+".00";
+            }
+            else{
+                document.getElementById('cartItem').innerHTML = cart.map((items)=>
+                {
+                   var {image, title, price} = items;
+                   total=total+price;
+                   document.getElementById("total").innerHTML = "₹ "+total+".00";
+                   return(
+                    `<div class='cart-item'>
+                    <div class='row-img'>
+                        <img class='rowing' src=${image}>
+                    </div>
+                    <p style='font-size:12px;'>${title}</p>
+                    <h2 style='font-size:15px;'>$ ₹{price}.00</h2>`+
+                    "<i class='fa-solid fa-trash' onclick='delElement("+(j++) +")'></i></div>"
+                   );
+                }).join('');
+            }
+        }
+
+
+    </script> -->
+
 
   </body>
 
