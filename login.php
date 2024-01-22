@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if ($row = mysqli_fetch_assoc($result)) {
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['username'] = $row['username'];
-        header("Location: index.html");
+        header("Location: index.php");
         exit();
     } else {
         $error_message = "Invalid username or password";

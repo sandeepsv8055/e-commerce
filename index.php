@@ -62,7 +62,7 @@ https://templatemo.com/tm-571-hexashop
                             <li class="scroll-to-section"><a href="#men">Men's 🧥</a></li>
                             <li class="scroll-to-section"><a href="#women">Women's 👗</a></li>
                             <li class="scroll-to-section"><a href="#kids">Kid's 👕</a></li>
-                            <button class="button-28" role="button"><a href="login.html">Login</a></button>
+                            <button class="button-28" role="button"><a href="login.php">Login</a></button>
                             <!-- <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
