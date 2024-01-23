@@ -105,7 +105,7 @@ https://templatemo.com/tm-571-hexashop
                                 <h4>We Are MarketMingle</h4>
                                 <span>"Connecting You to What You Love."</span>
                                 <div class="main-border-button">
-                                    <a href="https://www.bing.com/aclk?ld=e8UgcQMZgpvqXfbRSse2x7dDVUCUz5TDBaRKBZvbijhAfC4y4qV9GkXe2HHECptww4bSAigWvvCZoWFaQNd6fPxaXhxR6eR3UF4sZN_TT0Alu2rcJkDicLIsy39wmq4Hrt7SCbfyKAVBDXPL7IZ0idR-iAejryqUQtPcfjqZr8kE1z-tyBHluMPZQg5W454l-SVoFo9w&u=aHR0cHMlM2ElMmYlMmZ3d3cubXludHJhLmNvbSUyZiUzZnV0bV9zb3VyY2UlM2RkbXNfYmluZyUyNnV0bV9tZWRpdW0lM2RiaW5nX2NwYyUyNnV0bV9jYW1wYWlnbiUzZEJpbmdfQnJhbmRfRXhhY3RfRGVza3RvcCUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2bXNjbGtpZCUzZDBiYmEzYzBlMjk1ZjE3YjY4YzFjNTk0ZmM0OWNjYTcyJTI2dXRtX3Rlcm0lM2RteW50cmElMjUyRiUyNnV0bV9jb250ZW50JTNkTXludHJhX0dlbmVyaWM&rlid=0bba3c0e295f17b68c1c594fc49cca72&ntb=1">Purchase Now!</a>
+                                    <a href="#">Purchase Now!</a>
                                 </div>
                             </div>
                             <img src="assets/images/mall.jpg" alt="">
@@ -128,7 +128,7 @@ https://templatemo.com/tm-571-hexashop
                                                 <h4>Women</h4>
                                                 <p>"Discover Your Signature Look."</p>
                                                 <div class="main-border-button">
-                                                    <a href="https://www.myntra.com/shop/women">Discover More</a>
+                                                    <a href="#">Discover More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,7 +148,7 @@ https://templatemo.com/tm-571-hexashop
                                                 <h4>Men</h4>
                                                 <p>"Clothing That Speaks Your Style."</p>
                                                 <div class="main-border-button">
-                                                    <a href="https://www.myntra.com/shop/men">Discover More</a>
+                                                    <a href="#">Discover More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@ https://templatemo.com/tm-571-hexashop
                                                 <h4>Kids</h4>
                                                 <p>"Little Styles, Big Smiles."</p>
                                                 <div class="main-border-button">
-                                                    <a href="https://www.myntra.com/shop/kids">Discover More</a>
+                                                    <a href="#">Discover More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,7 +188,7 @@ https://templatemo.com/tm-571-hexashop
                                                 <h4>Home & Decor</h4>
                                                 <p>"Making Dreams a Reality, One Room at a Time."</p>
                                                 <div class="main-border-button">
-                                                    <a href="https://www.myntra.com/shop/home-living">Discover More</a>
+                                                    <a href="#">Discover More</a>
                                                 </div>
                                             </div>
                                         </div>
