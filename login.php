@@ -6,8 +6,8 @@ include("db.php");
 $error_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $user_name = $_POST['username'];
-    $password = $_POST['password'];
+    $user_name = mysqli_real_escape_string($con, $_POST['gmail']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
 
     $query = "SELECT * FROM form WHERE username='$user_name' AND password='$password'";
     $result = mysqli_query($con, $query);
@@ -17,8 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['username'] = $row['username'];
         header("Location: index.php");
         exit();
+        echo"<script type='text/javascript'> alert('Welcome User')</script>";
+
     } else {
-        $error_message = "Invalid username or password";
+        echo"<script type='text/javascript'> alert('Enter Again')</script>";
+
     }
 }
 ?>
