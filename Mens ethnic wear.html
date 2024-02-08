@@ -130,6 +130,196 @@
             right:inherit;
 
         }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+            font-size: 18px;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            background-color: grey;
+            border-radius: 3px;
+            margin: 30px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+        .cart{
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 3px;
+            width: 80px;
+        }
+        .fa-solid{
+            color: grey;
+        }
+        .cart p{
+            height: 22px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            background-color: grey;
+            color: white;
+        }
+        .container1 {
+            display: flex;
+            width: 60%;
+            margin-bottom: -300px;
+            margin-left: auto; 
+            margin-right: 30px; 
+        }
+
+        #root{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        .sidebar{
+            width: 40%;
+            border-radius: 5px;
+            background-color: #eee;
+            margin-left: 500px;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .head{
+            background-color: grey;
+            border-radius: 3px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .foot{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid #333;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid grey;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .img-box{
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image{
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .bottom{
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+
+        }
+        button:hover{
+            background-color: #333;
+        }
+        .cart-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 3px;
+            margin: 10px 10px;
+        }
+        .row-img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rowimg{
+            max-width: 43px;
+            max-height: 43px;
+            border-radius: 50%;
+        }
+        .fa-trash:hover{
+            cursor: pointer;
+            color: #333;
+        }
+
+/* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
     </style>
     </head>
     
@@ -196,6 +386,21 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed top">
 
     </nav>
+     <!--*** Add to Cart ***-->
+     <br>
+     <br>
+     <div class="container1">
+         <div class="sidebar">
+             <div class="head"><p>My Cart</p></div>
+             <div class="cart"><i class="fa fa-shopping-cart cart"></i><p id="count">0</p></div>
+             <div id="cartItem">Your cart is empty</div>
+             <div class="foot">
+                 <h3>Total</h3>
+                 <h2 id="total">₹ 0.00</h2>
+             </div>
+             <button class="button-30" role="button"><a href='payment.html'>Payment</a></button>
+         </div>
+     </div>
 
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
@@ -231,7 +436,7 @@
                     <option>Large</option>
                 </select>
                 <input type="number" value="1">
-                <button class="buy-btn">Add To Cart</button>
+                <button class="buy-btn" onclick="addtocart(0)">Add To Cart</button>
                 <h4 class="mt-5 mb-5">
                     Product Detail
                 </h4>
@@ -438,6 +643,70 @@
         MainImg.src = smallimg[3].src
      }
     </script>
+    <script>
+        const products = [
+          {
+            id: 0,
+            image: 'assets/images/Mens t-shirt.png',
+            title: 'Roadster T-Shirt',
+            price: 599,
+          },
+          // Add other products with similar structure
+        ];
+        
+        var cart = [];
+        
+        function addtocart(productId) {
+          const selectedProduct = products.find(item => item.id === productId);
+          if (selectedProduct) {
+            cart.push(selectedProduct);
+            displaycart();
+          }
+        }
+        
+        function delElement(index) {
+          cart.splice(index, 1);
+          displaycart();
+        }
+        
+        function displaycart() {
+          let total = 0;
+          document.getElementById("count").innerHTML = cart.length;
+        
+          if (cart.length === 0) {
+            document.getElementById('cartItem').innerHTML = "Your cart is empty";
+            document.getElementById("total").innerHTML = "₹ " + 0 + ".00";
+          } else {
+            document.getElementById('cartItem').innerHTML = cart.map((item, index) => {
+              const { id, image, title, price } = item;
+              total += price;
+        
+              return `
+                <div class='cart-item'>
+                  <div class='row-img'>
+                    <img class='rowimg' src="assets/images/mens ethnic1.png" alt='${title}'>
+                  </div>
+                  <p style='font-size:12px;'>${title}</p>
+                  <h2 style='font-size:15px;'>₹ ${price}.00</h2>
+                  <span class='trash-icon' onclick='delElement(${index})'>&#128465;</span>
+                </div>
+              `;
+            }).join('');
+        
+            document.getElementById("total").innerHTML = "₹ " + total.toFixed(2);
+          }
+        }
+        
+        function checkout() {
+          // Simple alert for demonstration purposes
+          alert(`Total amount: ₹ ${total.toFixed(2)}\nThank you for shopping with us!`);
+          // Clear the cart after checkout
+          cart = [];
+          displaycart();
+        }
+        
+        </script>
+        
 
   </body>
 
